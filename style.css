@@ -100,7 +100,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 2% 60px 2%;
+    padding: 70px 2% 60px 2%;
     width: 90%; /* Ajusta el ancho para que siempre haya espacio a los lados */
     margin: 0 auto;
 }
@@ -176,12 +176,42 @@ ul {
 }
 
 /* =========================================
+   SECCIÓN HERO (PRINCIPAL) - NUEVOS ESTILOS
+   ========================================= */
+
+/* Estilos para los iconos de tecnologías */
+.tech-icons {
+    margin-top: 1.5rem; /* Espacio superior */
+    margin-bottom: 2rem; /* Espacio inferior antes del párrafo */
+    display: flex;
+    gap: 1.5rem; /* Espacio entre iconos */
+}
+
+.tech-icons i {
+    font-size: 2.5rem; /* Tamaño grande para los iconos */
+    color: var(--text-muted); /* Color suave por defecto (gris) */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.tech-icons i:hover {
+    color: var(--accent-color); /* Usa tu color de acento azul al pasar el ratón */
+    transform: scale(1.1); /* Efecto de zoom suave */
+}
+
+/* =========================================
    SECCIONES DE RELLENO (Estilo genérico)
    ========================================= */
 .section-placeholder {
-    padding: 4rem 5%;
-    min-height: 50vh; /* Altura mínima para ver el scroll */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem; 
+    min-height: 50vh;
     border-bottom: 1px solid var(--bg-secondary);
+}
+
+.section-placeholder p {
+    font-size: 1.1rem;
 }
 
 .section-placeholder h2 {
@@ -190,6 +220,7 @@ ul {
     font-size: 2rem;
 }
 
+    
 /* =========================================
    FOOTER
    ========================================= */
