@@ -187,26 +187,47 @@ ul {
     gap: 1.5rem; /* Espacio entre iconos */
 }
 
-.tech-icons i {
-    font-size: 2.5rem; /* Tamaño grande para los iconos */
-    color: var(--text-muted); /* Color suave por defecto (gris) */
+.hero-content .tech-icons i {
+    font-size: 3rem;
+    color: var(--text-muted);
     transition: color 0.3s, transform 0.3s;
 }
 
-.tech-icons i:hover {
-    color: var(--accent-color); /* Usa tu color de acento azul al pasar el ratón */
-    transform: scale(1.1); /* Efecto de zoom suave */
+.tech-icons i {
+    font-size: 4rem;
+    color: var(--text-muted);
+    transition: color 0.3s, transform 0.3s;
 }
+
+
+.tech-icons i:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.tech-icon-svg svg {
+    width: 4rem;
+    height: 4rem;
+    fill: var(--text-muted); 
+    transition: fill 0.3s ease;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.tech-icon-svg svg:hover {
+    fill: var(--accent-color);
+    transform: scale(1.1);
+}
+
 
 /* =========================================
    SECCIONES DE RELLENO (Estilo genérico)
    ========================================= */
 .section-placeholder {
-    max-width: 1000px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem; 
-    min-height: 50vh;
+    min-height: 500px;
     border-bottom: 1px solid var(--bg-secondary);
 }
 
@@ -217,6 +238,7 @@ ul {
 .section-placeholder h2 {
     color: var(--accent-color);
     margin-bottom: 1rem;
+    margin-top: 3rem;
     font-size: 2rem;
 }
 
