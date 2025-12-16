@@ -242,7 +242,152 @@ ul {
     font-size: 2rem;
 }
 
+/* =========================================
+   SECCIÓN PROYECTOS
+   ========================================= */
+.project-grid {
+    display: grid;
+    /* Crea dos columnas por defecto. Si el espacio es menor a 300px,
+       el navegador las hace responsivas (una sola columna). */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid transparent; /* Borde inicial transparente */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Flexbox para asegurar que el botón siempre esté abajo */
+    display: flex; 
+    flex-direction: column;
+}
+
+.project-card:hover {
+    border-color: var(--accent-color);
+    /* Sombra con el color de acento */
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5); 
+    transform: translateY(-5px); /* Pequeño efecto 3D al pasar el ratón */
+}
+
+.project-card h3 {
+    color: var(--text-main);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    flex-grow: 1; /* Asegura que todas las tarjetas tengan la misma altura visual */
+    margin-bottom: 1rem;
+}
+
+/* Reajuste del tamaño de los iconos en las tarjetas */
+.project-card .card-icons {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-card .card-icons i {
+    font-size: 2.5rem; /* Iconos un poco más pequeños que en la sección Hero */
+    color: var(--text-muted);
+}
+
+.project-card .btn.secondary {
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+}
     
+
+/* Nuevo contenedor para los dos botones de la tarjeta */
+.card-buttons {
+    margin-top: auto; /* Empuja los botones hacia abajo si la descripción es corta */
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between; 
+}
+
+/* Asegurar que los botones dentro de la tarjeta se estiren bien */
+.project-card .btn {
+    flex-grow: 1; /* Hace que ambos botones ocupen el mismo ancho */
+    text-align: center;
+    padding: 0.8rem 1rem; /* Ajuste ligero del padding si es necesario */
+}
+/* =========================================
+   ESTILOS DEL MODAL (Lightbox) - VERSIÓN SUAVE
+   ========================================= */
+
+/* Contenedor principal del modal: cubre toda la pantalla y está Oculto */
+.modal {
+    display: none; /* Se mantiene 'none' para quitarlo del flujo */
+    position: fixed;
+    z-index: 9999; /* Asegura que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+    /* Configuración inicial para la transición */
+    background-color: rgba(0, 0, 0, 0); /* Empieza transparente */
+    transition: background-color 0.4s ease; /* Transición para el fondo */
+    padding-top: 60px; 
+    pointer-events: none; /* Desactiva clics cuando está oculto */
+}
+
+/* Clase que se añade con JS para MOSTRAR el modal */
+.modal.open {
+    display: block; /* Se muestra el contenedor (primero) */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro suave */
+    pointer-events: auto; /* Permite clics */
+}
+
+/* La imagen dentro del modal (tamaño y animación) */
+.modal-content {
+    margin: auto;
+    display: block;
+    
+    /* 1. TAMAÑO MÁS CHICO: Limita el tamaño de la imagen al 70% del viewport */
+    width: auto;
+    max-width: 70vw; 
+    max-height: 70vh; 
+    object-fit: contain;
+    
+    /* 2. ANIMACIÓN SUAVE: Estado inicial (oculto) */
+    opacity: 0; /* Transparente */
+    transform: scale(0.8) translateY(-20px); /* Ligeramente más pequeño y levantado */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Transición para la imagen */
+}
+
+/* Aplica el estilo final a la imagen cuando el modal está abierto */
+.modal.open .modal-content {
+    opacity: 1; /* Se vuelve visible */
+    transform: scale(1) translateY(0); /* Vuelve a su tamaño y posición normal */
+}
+
+/* El botón de cerrar (x) */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* =========================================
    FOOTER
    ========================================= */
