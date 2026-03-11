@@ -488,10 +488,11 @@ footer {
     color: var(--text-main);
 }
 
+/* Tablets y móviles grandes */
 @media (max-width: 768px) {
     
     .navbar {
-        padding: 1rem 5%;
+        padding: 0.8rem 5%;
         justify-content: space-between; 
     }
 
@@ -517,67 +518,215 @@ footer {
         box-shadow: 0 10px 10px rgba(0,0,0,0.2);
     }
 
-    
     .nav-links.active {
         max-height: 500px;
         opacity: 1;
     }
 
-    
     .btn-header {
         display: none; 
     }
 
-   
     .hero-section {
         flex-direction: column-reverse; 
         text-align: center;
-        padding-top: 2rem;
+        padding: 2rem 5%;
         justify-content: center;
-        min-height: auto; 
+        min-height: auto;
+        width: 100%;
     }
 
     .image-container {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         padding-left: 0;
     }
 
     .profile-pic {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
 
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
     }
 
     .hero-content p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .cta-buttons {
         justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
     }
 
     .tech-icons {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
-    
+    .hero-content .tech-icons i {
+        font-size: 2.2rem;
+    }
+
+    .tech-icons i {
+        font-size: 2.8rem;
+    }
+
+    .tech-icon-svg svg {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
     .section-placeholder {
         padding: 0 5%;
+        min-height: auto;
+    }
+
+    .section-placeholder h2 {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+
+    .section-placeholder p {
+        font-size: 1rem;
     }
 
     .project-grid {
         grid-template-columns: 1fr; 
     }
 
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-card .card-icons i {
+        font-size: 2rem;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .project-card .btn {
+        width: 100%;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
-    
+
+    .contact-card {
+        padding: 1.2rem;
+    }
+
+    .contact-card i {
+        font-size: 2rem;
+    }
+
+    .contact-card h4 {
+        font-size: 1.1rem;
+    }
     
     .modal-content {
-        max-width: 90vw;
+        max-width: 95vw;
+        max-height: 60vh;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 30px;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 0.6rem 4%;
+    }
+
+    .hero-section {
+        padding: 1.5rem 4%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .hero-content .tech-icons i {
+        font-size: 1.8rem;
+    }
+
+    .tech-icons i {
+        font-size: 2.2rem;
+    }
+
+    .tech-icon-svg svg {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .section-placeholder h2 {
+        font-size: 1.4rem;
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+    }
+
+    .contact-card p {
+        font-size: 0.85rem;
+        word-break: break-word;
     }
 }
