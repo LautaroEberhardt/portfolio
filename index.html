@@ -1,212 +1,403 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de Lautaro Eberhardt - Backend Developer.">
-    <title>Portfolio Lautaro Eberhardt</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2350c878%22 font-family=%22sans-serif%22 font-weight=%22bold%22>L</text></svg>">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Lautaro Eberhardt - Backend Developer.">
+  <title>Lautaro Eberhardt | Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2350c878%22 font-family=%22sans-serif%22 font-weight=%22bold%22>L</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
-
 <body>
 
-    <header class="navbar">
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <a href="#inicio" class="nav-logo">Lautaro Eberhardt</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="nav-menu" id="nav-menu">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#habilidades">Skills</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+      <a href="CVLautaroEberhardt.pdf" class="btn-cv" download>
+        <i class="fa-solid fa-download"></i> CV
+      </a>
+    </nav>
+  </header>
 
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="fa-solid fa-bars"></i>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Disponible para oportunidades
+      </div>
+      <h1>
+        Técnico Superior en<br>
+        <span class="highlight">Desarrollo de Software</span>
+      </h1>
+      <p class="hero-desc">
+        Desarrollo soluciones backend robustas y eficientes.
+        Me apasiona construir sistemas que combinan innovación con funcionalidad real.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Proyectos desarrollados</span>
         </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">Backend</span>
+          <span class="stat-label">Especialización principal</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">22</span>
+          <span class="stat-label">Años · Santa Fe, AR</span>
+        </div>
+      </div>
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                <li><a href="#sobre-mi"><i class="fa-solid fa-user"></i> Sobre Mí / Habilidades</a></li>
-                <li><a href="#proyectos"><i class="fa-solid fa-briefcase"></i> Proyectos</a></li>
-                <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
-            </ul>
-        </nav>
+      <div class="hero-cta">
+        <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+        <a href="#contacto" class="btn-outline">Contactarme</a>
+      </div>
+    </div>
 
-        <a href="CVLautaroEberhardt.pdf" class="btn secondary btn-header" download>Descargar CV</a>
-        
-    </header>
+    <div class="hero-image">
+      <div class="image-wrapper">
+        <img src="foto mia fondo gris.jpeg" alt="Foto de perfil de Lautaro Eberhardt">
+      </div>
+    </div>
+  </section>
 
-    <section id="inicio" class="hero-section">
-    
-    <div class="hero-content" data-aos="fade-right">
-        <h1>Hola, soy <span class="highlight">Lautaro Eberhardt</span></h1>
-        <h2>Técnico Superior en Desarrollo de Software</h2>
-        <p><span class="highlight">Backend Developer</span> | Sólidas aptitudes en <span class="highlight">Python y SQL</span></p>
-            Me apasiona diseñar soluciones eficientes y colaborar</p>
-            en proyectos que combinan innovación y funcionalidad.
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="section">
+    <div class="section-header">
+      <h2>Proyectos</h2>
+      <p>Selección de proyectos reales enfocados en backend, automatización y gestión.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Proyecto 1 -->
+      <article class="project-card featured">
+        <div class="project-meta">
+          <span class="project-type">Web · Full Stack</span>
+          <span class="project-status status-done">Completado</span>
+        </div>
+        <h3>Plataforma de canje de puntos</h3>
+        <p>Sistema web de fidelización de clientes para AyV Uniformes. Permite acumular puntos por compras, canjearlos por premios y gestionar el ciclo completo desde un panel de administración.</p>
+        <div class="project-highlight">
+          <i class="fa-solid fa-star"></i>
+          Sistema completo con panel admin, backend REST y frontend desplegado en producción.
+        </div>
+        <div class="project-stack">
+          <span>Next.js</span>
+          <span>NestJS</span>
+          <span>PostgreSQL</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/LautaroEberhardt/Rewards-Redemption-Platform" target="_blank">
+            <i class="fa-brands fa-github"></i> Ver código
+          </a>
+          <a href="https://ayvuniformes-puntos.vercel.app/" target="_blank" class="link-live">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver sitio
+          </a>
+        </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="project-card featured">
+        <div class="project-meta">
+          <span class="project-type">Desktop · Python</span>
+          <span class="project-status status-done">Completado</span>
+        </div>
+        <h3>Sistema de gestión de panadería</h3>
+        <p>Automatización y control de pedidos, historial y stock para una panadería. Frontend desarrollado con Flet para mejorar la eficiencia operativa.</p>
+        <div class="project-highlight">
+          <i class="fa-solid fa-star"></i>
+          Reduce errores manuales y optimiza el control de stock en tiempo real.
+        </div>
+        <div class="project-stack">
+          <span>Python</span>
+          <span>Flet</span>
+          <span>MySQL</span>
+          <span>Docker</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Lautidel8/sistema_gestor_panificadora" target="_blank">
+            <i class="fa-brands fa-github"></i> Ver código
+          </a>
+          <button class="link-img-btn" data-image="image.png">
+            <i class="fa-solid fa-image"></i> Ver imagen
+          </button>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="project-card featured">
+        <div class="project-meta">
+          <span class="project-type">Desktop · Python</span>
+          <span class="project-status status-done">Completado</span>
+        </div>
+        <h3>Sistema de alquiler de vehículos</h3>
+        <p>Gestión integral de alquiler de vehículos, reservas y control de pagos. Interfaz gráfica moderna con CustomTkinter.</p>
+        <div class="project-stack">
+          <span>Python</span>
+          <span>Tkinter</span>
+          <span>CustomTkinter</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Lautidel8/Trabajo-practico-programacion-completo" target="_blank">
+            <i class="fa-brands fa-github"></i> Ver código
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="section section-alt">
+    <div class="section-header">
+      <h2>Skills</h2>
+      <p>Stack técnico organizado por áreas. Enfocado en backend, bases de datos y automatización.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4><i class="fa-solid fa-server"></i> Backend</h4>
+        <div class="skill-tags">
+          <span><i class="fa-brands fa-python"></i> Python</span>
+          <span><i class="devicon-nestjs-original"></i> NestJS</span>
+          <span>REST APIs</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4><i class="fa-solid fa-database"></i> Bases de datos</h4>
+        <div class="skill-tags">
+          <span><i class="devicon-mysql-plain"></i> MySQL</span>
+          <span><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+          <span>SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4><i class="fa-solid fa-code"></i> Frontend</h4>
+        <div class="skill-tags">
+          <span><i class="fa-brands fa-html5"></i> HTML</span>
+          <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+          <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4><i class="fa-solid fa-gears"></i> DevOps & Herramientas</h4>
+        <div class="skill-tags">
+          <span><i class="fa-brands fa-docker"></i> Docker</span>
+          <span><i class="devicon-github-original"></i> GitHub</span>
+          <span>Git</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="section">
+    <div class="aboutme-layout">
+      <div class="aboutme-text">
+        <div class="section-header left">
+          <h2>Sobre mí</h2>
+          <p>Perfil backend con foco en soluciones eficientes y código limpio.</p>
+        </div>
+        <p>
+          Soy Lautaro Eberhardt, tengo 22 años y soy Técnico Superior en Desarrollo de Software.
+          Mi enfoque principal es el desarrollo backend, con sólidas aptitudes en Python y SQL.
+        </p>
+        <p>
+          Me apasiona diseñar soluciones eficientes y colaborar en proyectos que combinan
+          innovación y funcionalidad. Busco constantemente nuevos desafíos que me permitan
+          crecer y aportar valor real.
         </p>
 
-        <div class="tech-icons">
-            <i class="fa-brands fa-python" title="Python"></i>
-            <i class="devicon-mysql-plain" title="SQL / MySQL"></i> <i class="fa-brands fa-docker" title="Docker"></i>
-            <i class="fa-brands fa-html5" title="HTML"></i>
-            <i class="fa-brands fa-css3-alt" title="CSS"></i>
+        <div class="aboutme-cards">
+          <div class="about-card">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <strong>Soluciones eficientes</strong>
+              <span>Diseño sistemas pensados para escalar y mantenerse en el tiempo.</span>
+            </div>
+          </div>
+          <div class="about-card">
+            <i class="fa-solid fa-handshake"></i>
+            <div>
+              <strong>Trabajo en equipo</strong>
+              <span>Me adapto fácilmente a equipos y metodologías ágiles.</span>
+            </div>
+          </div>
+          <div class="about-card">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+              <strong>Aprendizaje continuo</strong>
+              <span>Siempre actualizándome en backend, bases de datos y nuevas tecnologías.</span>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="cta-buttons">
-            <a href="#proyectos" class="btn primary">Ver Proyectos</a>
-            <a href="#contacto" class="btn secondary">Contáctame</a>
+      <div class="aboutme-cv">
+        <div class="cv-card">
+          <div class="cv-icon">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <h4>Currículum Vitae</h4>
+          <p>Versión actualizada de mi perfil profesional, orientada a desarrollo backend y soluciones de software.</p>
+          <div class="cv-meta">
+            <span><i class="fa-solid fa-file-pdf"></i> Formato PDF</span>
+            <span><i class="fa-solid fa-language"></i> Español</span>
+            <span><i class="fa-solid fa-user-tie"></i> Backend Developer</span>
+          </div>
+          <a href="CVLautaroEberhardt.pdf" class="btn-primary" download>
+            <i class="fa-solid fa-download"></i> Descargar CV
+          </a>
         </div>
+      </div>
     </div>
-    
-    <div class="image-container" data-aos="fade-left">
-        <img src="foto mia fondo gris.jpeg" alt="Foto de perfil" class="profile-pic">
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section section-alt">
+    <div class="section-header">
+      <h2>Contacto</h2>
+      <p>¿Tenés un proyecto o una oportunidad? Estoy disponible para colaborar.</p>
     </div>
-    
-    </section>
 
-    <section id="sobre-mi" class="section-placeholder" data-aos="fade-up">
-        <div>
-            <h2>Sobre Mí</h2>
-                <p>Soy Lautaro Eberhardt tengo 22 años y soy técnico superior en desarrollo de software.</p>
-                <p>Mi enfoque principal es el desarrollo backend, con sólidas aptitudes en Python y SQL.</p>
-                <p>Me apasiona diseñar soluciones eficientes y colaborar en proyectos</p>
-                <p>que combinan innovación y funcionalidad.</p>
-
-            <h2>Habilidades y Tecnologías</h2>
-
-                <div class="tech-icons tech-icon-svg">
-                    <i class="fa-brands fa-python" title="Python"></i>
-                    <i class="devicon-mysql-plain" title="SQL / MySQL"></i> <i class="fa-brands fa-docker" title="Docker"></i>
-                    <i class="fa-brands fa-html5" title="HTML"></i>
-                    <i class="fa-brands fa-css3-alt" title="CSS"></i>
-                    <i class="devicon-postgresql-plain" title="PostgreSQL"></i>
-                    <i class="devicon-github-original-wordmark" title="GitHub"></i>
-                    <i class="devicon-nextjs-plain" title="Next.js"></i>
-                    <i class="devicon-nestjs-original" title="NestJS"></i>
-                </div>
-
+    <div class="contact-layout">
+      <div class="contact-intro">
+        <div class="available-badge">
+          <span class="badge-dot"></span>
+          Disponible para oportunidades
         </div>
-    </section>
-
-    <section id="proyectos" class="section-placeholder">
-        <h2 data-aos="fade-up">Proyectos</h2>
-        
-        <div class="project-grid">
-
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-                <h3>Plataforma web de canje de puntos</h3>
-                <p>Sistema web completo de fidelización de clientes para empresa AyV Uniformes.
-                    Permite acumular puntos por compras, canjearlos por premios y gestionar todo el ciclo
-                    desde un panel de administración.
-                </p>
-                
-                <div class="tech-icons card-icons">
-                    <i class="devicon-nextjs-plain" title="Next.js"></i>
-                    <i class="devicon-nestjs-original" title="NestJS"></i>
-                    <i class="devicon-postgresql-plain" title="PostgreSQL"></i>
-                </div>
-
-                <div class="card-buttons">
-                    <a href="https://github.com/LautaroEberhardt/Rewards-Redemption-Platform" target="_blank" class="btn secondary code-btn">Ver Código</a>
-                    <a href="https://ayvuniformes-puntos.vercel.app/" target="_blank" class="btn secondary code-btn">Ver Página</a>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-                <h3>Sistema Gestión de Panaderia</h3>
-                <p>Automatización y control de pedidos de una panadería, historial de pedidos y control de stock para mejorar la eficiencia y gestión.
-                    Frontend hecho con Flet .
-                </p>
-                
-                <div class="tech-icons card-icons">
-                    <i class="fa-brands fa-python" title="Python"></i>
-                    <i class="devicon-mysql-plain" title="MySQL"></i>
-                    <i class="fa-brands fa-docker" title="Docker"></i>
-                    </div>
-
-                <div class="card-buttons">
-                    <a href="https://github.com/Lautidel8/sistema_gestor_panificadora" target="_blank" class="btn secondary code-btn">Ver Código</a>
-                    <button type="button" data-image="image.png" class="btn secondary view-image-btn">Ver Imagen</button>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
-                <h3>Sistema de alquiler de vehiculos</h3>
-                <p>Sistema para la gestión de alquiler de vehículos, reservas y control de pagos.</p>
-                
-                <div class="tech-icons card-icons">
-                    <i class="fa-brands fa-python" title="Python"></i>
-                    <i class="fa-solid fa-database" title="Archivos binarios"></i>
-                    <span>Tkinter | CustomTkinter</span>
-                </div>
-
-                <div class="card-buttons">
-                    <a href="https://github.com/Lautidel8/Trabajo-practico-programacion-completo" target="_blank" class="btn secondary code-btn">Ver Código</a>
-                </div>
-            </div>
-            
+        <p>
+          Respondo rápido por email o LinkedIn. No dudes en contactarme para proyectos,
+          colaboraciones o nuevas oportunidades laborales.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:lautaroeberhardt8@gmail.com" class="btn-primary">
+            <i class="fa-solid fa-envelope"></i> Enviar email
+          </a>
+          <a href="https://www.linkedin.com/in/lautaro-eberhardt-015574337/" target="_blank" class="btn-outline">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
         </div>
-    </section>
-    
-    <section id="contacto" class="section-placeholder">
-        <h2 data-aos="fade-up">Contacto</h2>
-        <p data-aos="fade-up">Estoy disponible para proyectos, colaboraciones y nuevas oportunidades. No dudes en contactarme.</p>
-        
-        <div class="contact-grid">
+      </div>
 
-            <div class="contact-card copy-card" data-copy="lautaroeberhardt8@gmail.com" data-aos="flip-left" data-aos-delay="100">
-                <i class="fa-solid fa-envelope" title="Correo Electrónico"></i>
-                <h4>Correo Electrónico</h4>
-                <p>lautaroeberhardt8@gmail.com</p>
-                <span class="copy-feedback"></span>
-            </div>
-
-            <div data-copy="+03496512097" class="contact-card copy-card" data-aos="flip-left" data-aos-delay="200">
-                <i class="fa-solid fa-phone" title="Teléfono"></i>
-                <h4>Teléfono</h4>
-                <p>+03496512097</p>
-                <span class="copy-feedback"></span>
-            </div>
-
-            <div class="contact-card" data-aos="flip-left" data-aos-delay="300">
-                <i class="fa-solid fa-location-dot" title="Ubicación"></i>
-                <h4>Ubicación</h4>
-                <p>Santa Fe, Argentina</p>
-            </div>
-
-            <a href="https://github.com/LautaroEberhardt" target="_blank" class="contact-card social-link" data-aos="flip-left" data-aos-delay="400">
-                <i class="fa-brands fa-github" title="GitHub"></i>
-                <h4>GitHub</h4>
-                <p>LautaroEberhardt</p>
-            </a>
-
-            <a href="https://www.linkedin.com/in/lautaro-eberhardt-015574337/" target="_blank" class="contact-card social-link" data-aos="flip-left" data-aos-delay="500">
-                <i class="fa-brands fa-linkedin" title="LinkedIn"></i>
-                <h4>LinkedIn</h4>
-                <p>Lautaro Eberhardt</p>
-            </a>
-            
+      <div class="contact-info">
+        <a href="mailto:lautaroeberhardt8@gmail.com" class="contact-item copy-item" data-copy="lautaroeberhardt8@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <span>lautaroeberhardt8@gmail.com</span>
+          </div>
+          <i class="fa-regular fa-copy copy-icon"></i>
+        </a>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Ubicación</strong>
+            <span>Santa Fe, Argentina</span>
+          </div>
         </div>
-    </section>
-    
+        <a href="https://github.com/LautaroEberhardt" target="_blank" class="contact-item">
+          <i class="fa-brands fa-github"></i>
+          <div>
+            <strong>GitHub</strong>
+            <span>LautaroEberhardt</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/lautaro-eberhardt-015574337/" target="_blank" class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <div>
+            <strong>LinkedIn</strong>
+            <span>Lautaro Eberhardt</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-    <p class="copyright">&copy; 2025 Lautaro Eberhardt. Todos los derechos reservados.</p>
-    </footer>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Lautaro Eberhardt · Todos los derechos reservados.</p>
+  </footer>
 
+  <!-- MODAL IMAGEN -->
+  <div id="img-modal" class="modal">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <img id="modal-img" src="" alt="Vista previa del proyecto">
+  </div>
 
-    <div id="project-modal" class="modal">
-            <span class="close-btn">&times;</span>
-            <img class="modal-content" id="modal-image" src="" alt="Vista previa del proyecto">
-        </div>
+  <script src="script.js"></script>
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 30);
+    });
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1000,
-                once: true
-            });
-        </script>
-        <script src="script.js"></script>
+    // Mobile menu
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => navMenu.classList.toggle('open'));
+    navMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navMenu.classList.remove('open'));
+    });
 
+    // Smooth scroll offset
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 72;
+          window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Modal imagen
+    const modal = document.getElementById('img-modal');
+    const modalImg = document.getElementById('modal-img');
+    document.querySelectorAll('.link-img-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        modalImg.src = btn.dataset.image;
+        modal.classList.add('active');
+      });
+    });
+    document.getElementById('modal-close').addEventListener('click', () => modal.classList.remove('active'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+
+    // Copiar al portapapeles
+    document.querySelectorAll('.copy-item').forEach(item => {
+      item.addEventListener('click', e => {
+        e.preventDefault();
+        const text = item.dataset.copy;
+        navigator.clipboard.writeText(text).then(() => {
+          const icon = item.querySelector('.copy-icon');
+          icon.className = 'fa-solid fa-check copy-icon copied';
+          setTimeout(() => icon.className = 'fa-regular fa-copy copy-icon', 1500);
+        });
+      });
+    });
+
+    // Intersection Observer para animaciones
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.project-card, .skill-group, .about-card, .contact-item').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
