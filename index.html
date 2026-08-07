@@ -300,9 +300,9 @@
           colaboraciones o nuevas oportunidades laborales.
         </p>
         <div class="contact-actions">
-          <a href="mailto:lautaroeberhardt8@gmail.com" class="btn-primary">
-            <i class="fa-solid fa-envelope"></i> Enviar email
-          </a>
+          <button class="btn-primary copy-email-button" type="button" data-copy="lautaroeberhardt8@gmail.com" aria-label="Copiar email de Lautaro Eberhardt">
+            <i class="fa-solid fa-copy"></i> <span>Copiar email</span>
+          </button>
           <a href="https://www.linkedin.com/in/lautaro-eberhardt-015574337/" target="_blank" class="btn-outline">
             <i class="fa-brands fa-linkedin"></i> LinkedIn
           </a>
@@ -403,6 +403,22 @@
           const icon = item.querySelector('.copy-icon');
           icon.className = 'fa-solid fa-check copy-icon copied';
           setTimeout(() => icon.className = 'fa-regular fa-copy copy-icon', 1500);
+        });
+      });
+    });
+
+    // Copiar email desde el botón de contacto
+    document.querySelectorAll('.copy-email-button').forEach(button => {
+      button.addEventListener('click', () => {
+        navigator.clipboard.writeText(button.dataset.copy).then(() => {
+          const label = button.querySelector('span');
+          const icon = button.querySelector('i');
+          label.textContent = '¡Email copiado!';
+          icon.className = 'fa-solid fa-check';
+          setTimeout(() => {
+            label.textContent = 'Copiar email';
+            icon.className = 'fa-solid fa-copy';
+          }, 1800);
         });
       });
     });
