@@ -326,6 +326,7 @@ button { cursor: pointer; font-family: inherit; }
 }
 .status-live { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent-border); }
 .status-done { background: rgba(255,255,255,0.05); color: var(--text-muted); border: 1px solid var(--border); }
+.status-progress { background: rgba(255, 184, 77, 0.12); color: #ffb84d; border: 1px solid rgba(255, 184, 77, 0.3); }
 
 .project-card h3 {
   font-size: 1.05rem;
