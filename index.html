@@ -162,19 +162,27 @@
       <!-- Proyecto 4 -->
       <article class="project-card featured">
         <div class="project-meta">
-          <span class="project-type">Desktop · Full Stack</span>
-          <span class="project-status status-progress">En desarrollo</span>
+          <span class="project-type">WEB · FULL STACK</span>
+          <span class="project-status status-done">Completado</span>
         </div>
-        <h3>App para Clínica del Centro Estético Wagner</h3>
-        <p>Aplicación para optimizar la gestión diaria de la clínica, centralizando procesos y brindando una herramienta ágil para la operación del Centro Estético Wagner.</p>
+        <h3>Sistema de Gestión Clínica</h3>
+        <p>Plataforma web desarrollada para Centro Wagner, un centro de estética y cirugía plástica, que centraliza la gestión de pacientes, tratamientos y turnos.</p>
         <div class="project-highlight">
-          <i class="fa-solid fa-code"></i>
-          Proyecto en desarrollo, enfocado en una solución práctica para la gestión de la clínica.
+          <i class="fa-solid fa-star"></i>
+          Despliegue on-premise con Docker, diseñado para proteger datos sensibles y mantener la operación dentro de la red interna de la clínica.
         </div>
         <div class="project-stack">
           <span>Next.js</span>
           <span>NestJS</span>
           <span>PostgreSQL</span>
+          <span>Docker</span>
+        </div>
+        <div class="project-links">
+          <button class="link-img-btn" type="button"
+            data-images='["project-images/sistema-clinica-1.png","project-images/sistema-clinica-2.png","project-images/sistema-clinica-3.png","project-images/sistema-clinica-4.png"]'
+            data-titles='["Agenda y turnos del sistema clínico","Administración del sistema clínico","Tratamientos del sistema clínico","Pacientes del sistema clínico"]'>
+            <i class="fa-solid fa-image"></i> Ver imágenes
+          </button>
         </div>
       </article>
 
@@ -356,8 +364,11 @@
 
   <!-- MODAL IMAGEN -->
   <div id="img-modal" class="modal">
-    <button class="modal-close" id="modal-close">&times;</button>
+    <button class="modal-close" id="modal-close" type="button" aria-label="Cerrar visor">&times;</button>
+    <button class="modal-nav modal-prev" id="modal-prev" type="button" aria-label="Imagen anterior"><i class="fa-solid fa-chevron-left"></i></button>
     <img id="modal-img" src="" alt="Vista previa del proyecto">
+    <button class="modal-nav modal-next" id="modal-next" type="button" aria-label="Imagen siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+    <p class="modal-counter" id="modal-counter" aria-live="polite"></p>
   </div>
 
   <script src="script.js"></script>
@@ -391,14 +402,48 @@
     // Modal imagen
     const modal = document.getElementById('img-modal');
     const modalImg = document.getElementById('modal-img');
+    const modalPrev = document.getElementById('modal-prev');
+    const modalNext = document.getElementById('modal-next');
+    const modalCounter = document.getElementById('modal-counter');
+    let modalImages = [];
+    let modalTitles = [];
+    let currentImage = 0;
+
+    const updateModalImage = () => {
+      modalImg.src = modalImages[currentImage];
+      modalImg.alt = modalTitles[currentImage] || 'Vista previa del proyecto';
+      const isCarousel = modalImages.length > 1;
+      modalPrev.hidden = !isCarousel;
+      modalNext.hidden = !isCarousel;
+      modalCounter.hidden = !isCarousel;
+      modalCounter.textContent = isCarousel ? `${currentImage + 1} / ${modalImages.length}` : '';
+    };
+
     document.querySelectorAll('.link-img-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        modalImg.src = btn.dataset.image;
+        modalImages = btn.dataset.images ? JSON.parse(btn.dataset.images) : [btn.dataset.image];
+        modalTitles = btn.dataset.titles ? JSON.parse(btn.dataset.titles) : [btn.dataset.title];
+        currentImage = 0;
+        updateModalImage();
         modal.classList.add('active');
       });
     });
+    modalPrev.addEventListener('click', () => {
+      currentImage = (currentImage - 1 + modalImages.length) % modalImages.length;
+      updateModalImage();
+    });
+    modalNext.addEventListener('click', () => {
+      currentImage = (currentImage + 1) % modalImages.length;
+      updateModalImage();
+    });
     document.getElementById('modal-close').addEventListener('click', () => modal.classList.remove('active'));
     modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+    document.addEventListener('keydown', e => {
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'Escape') modal.classList.remove('active');
+      if (modalImages.length > 1 && e.key === 'ArrowLeft') modalPrev.click();
+      if (modalImages.length > 1 && e.key === 'ArrowRight') modalNext.click();
+    });
 
     // Copiar al portapapeles
     document.querySelectorAll('.copy-item').forEach(item => {
