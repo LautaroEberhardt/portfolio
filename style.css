@@ -1856,20 +1856,16 @@ a:focus-visible,button:focus-visible {
 /* Keep the longer hero copy readable on narrow screens and short viewports. */
 .hero-stage { min-height: 0; }
 @media (max-width: 760px) {
-  .hero h1 {
-    position: absolute;
-    inset: clamp(120px, 24svh, 220px) 20px auto;
-    display: flex;
-    flex-direction: column;
-    gap: .18em;
-    font-family: var(--font-brand);
-    font-size: clamp(36px, min(10.8vw, 8svh), 72px);
-    font-weight: 400;
-    line-height: 1.08;
-    letter-spacing: -.055em;
+  .hero h1 { font-size: clamp(40px, min(12vw, 8svh), 80px); }
+  /* Match the desktop depth: rear title, mouse, then foreground title. */
+  .line-back { top: calc(52% - 1.5em); font-size: 1.25em; }
+  .line-front {
+    top: calc(52% - .25em);
+    left: 20px;
+    right: 20px;
+    white-space: normal;
+    text-wrap: balance;
   }
-  .hero-line { position: relative; inset: auto; }
-  .line-front { font-size: 1.12em; white-space: normal; text-wrap: balance; }
   .hero-bottom { bottom: max(28px, 6%); }
   .social-icons { gap: clamp(12px, 3vw, 18px); }
   .project-links a,.project-links button { min-height: 44px; display: inline-flex; align-items: center; }
