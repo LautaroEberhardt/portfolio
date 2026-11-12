@@ -2,483 +2,232 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Lautaro Eberhardt - Backend Developer.">
-  <title>Lautaro Eberhardt | Portfolio</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2350c878%22 font-family=%22sans-serif%22 font-weight=%22bold%22>L</text></svg>">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b09">
+  <meta name="description" content="dev.eberhardt — Lautaro Eberhardt. Desarrollo de software, backend y aplicaciones web que convierten ideas en soluciones reales. Santa Fe, Argentina.">
+  <meta property="og:title" content="dev.eberhardt — Ideas claras. Código real.">
+  <meta property="og:description" content="Desarrollo de software con foco en backend, automatización y soluciones para negocios.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="project-images/dev-eberhardt-logo-transparent.png">
+  <title>dev.eberhardt — Desarrollo de software</title>
+  <link rel="icon" type="image/svg+xml" href="project-images/favicon-symbol.svg">
+  <link rel="preload" as="image" href="project-images/hero-dev-eberhardt-v1/mouse.png">
+  <link rel="preload" href="fonts/Chillax-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20261112-aura-soft">
+  <script src="script.js?v=20261112-aura-soft" defer></script>
 </head>
 <body>
-
-  <!-- NAVBAR -->
+  <a class="skip-link" href="#proyectos">Saltar al contenido</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-aura" aria-hidden="true"></div>
   <header class="navbar" id="navbar">
-    <a href="#inicio" class="nav-logo">Lautaro Eberhardt</a>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <nav class="nav-menu" id="nav-menu">
+    <a class="brand" href="#inicio" aria-label="dev.eberhardt — Inicio">
+      <span class="brand-symbol" aria-hidden="true"><img src="project-images/dev-eberhardt-logo-transparent.png" alt="" width="1254" height="1254"></span>
+      <span class="brand-wordmark"><img src="project-images/dev-eberhardt-logo-transparent.png" alt="dev.eberhardt" width="1254" height="1254"></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span></button>
+    <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal">
       <a href="#proyectos">Proyectos</a>
-      <a href="#habilidades">Skills</a>
       <a href="#sobre-mi">Sobre mí</a>
+      <a href="#habilidades">Stack</a>
       <a href="#contacto">Contacto</a>
-      <a href="CVLautaroEberhardt.pdf" class="btn-cv" download>
-        <i class="fa-solid fa-download"></i> CV
+      <a class="nav-action" href="CVLautaroEberhardt.pdf?v=20261111" download>
+        <span class="nav-action-fill" aria-hidden="true"></span>
+        <span class="nav-action-label">Descargar CV</span>
+        <span class="nav-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false"><path stroke-linecap="square" stroke-linejoin="miter" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></span>
       </a>
     </nav>
   </header>
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <div class="hero-glow" aria-hidden="true"></div>
 
-  <!-- HERO -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Disponible para oportunidades
+        <h1 id="hero-title"><span class="hero-line line-back">Ideas Claras.</span><span class="hero-line line-front">Soluciones Originales.</span></h1>
+        <div class="hero-art" aria-hidden="true">
+          <img class="hero-mouse" src="project-images/hero-dev-eberhardt-v1/mouse.png" alt="" width="1254" height="1254" fetchpriority="high">
+          <img class="hero-hand" src="project-images/hero-dev-eberhardt-v1/hand.png" alt="" width="1254" height="1254">
+        </div>
+        <div class="hero-bottom">
+          <div class="hero-actions">
+            <a class="animated-button" href="#proyectos">
+              <svg class="arr-2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4l8 8-8 8-1.4-1.4 5.6-5.6H4v-2h12.2l-5.6-5.6L12 4z"/></svg>
+              <span class="text">Explorar proyectos</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg class="arr-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4l8 8-8 8-1.4-1.4 5.6-5.6H4v-2h12.2l-5.6-5.6L12 4z"/></svg>
+            </a>
+            <a class="animated-button" href="#contacto">
+              <svg class="arr-2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4l8 8-8 8-1.4-1.4 5.6-5.6H4v-2h12.2l-5.6-5.6L12 4z"/></svg>
+              <span class="text">Contame tu idea</span>
+              <span class="circle" aria-hidden="true"></span>
+              <svg class="arr-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4l8 8-8 8-1.4-1.4 5.6-5.6H4v-2h12.2l-5.6-5.6L12 4z"/></svg>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="hero-progress" aria-hidden="true"><span></span></div>
       </div>
-      <h1>
-        Técnico Superior en<br>
-        <span class="highlight">Desarrollo de Software</span>
-      </h1>
-      <p class="hero-desc">
-        Desarrollo soluciones backend robustas y eficientes.
-        Me apasiona construir sistemas que combinan innovación con funcionalidad real.
-      </p>
-
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">4+</span>
-          <span class="stat-label">Proyectos desarrollados</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number">Backend</span>
-          <span class="stat-label">Especialización principal</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number">22</span>
-          <span class="stat-label">Años · Santa Fe, AR</span>
-        </div>
-      </div>
-
-      <div class="hero-cta">
-        <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
-        <a href="#contacto" class="btn-outline">Contactarme</a>
-      </div>
-    </div>
-
-    <div class="hero-image">
-      <div class="image-wrapper">
-        <img src="foto mia fondo gris.jpeg" alt="Foto de perfil de Lautaro Eberhardt">
-      </div>
-    </div>
-  </section>
-
-  <!-- PROYECTOS -->
-  <section id="proyectos" class="section">
-    <div class="section-header">
-      <h2>Proyectos</h2>
-      <p>Selección de proyectos reales enfocados en backend, automatización y gestión.</p>
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- Proyecto 1 -->
-      <article class="project-card featured">
-        <div class="project-meta">
-          <span class="project-type">Web · Full Stack</span>
-          <span class="project-status status-done">Completado</span>
-        </div>
-        <h3>Plataforma de canje de puntos</h3>
-        <p>Sistema web de fidelización de clientes para AyV Uniformes. Permite acumular puntos por compras, canjearlos por premios y gestionar el ciclo completo desde un panel de administración.</p>
-        <div class="project-highlight">
-          <i class="fa-solid fa-star"></i>
-          Sistema completo con panel admin, backend REST y frontend desplegado en producción.
-        </div>
-        <div class="project-stack">
-          <span>Next.js</span>
-          <span>NestJS</span>
-          <span>PostgreSQL</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/LautaroEberhardt/Rewards-Redemption-Platform" target="_blank">
-            <i class="fa-brands fa-github"></i> Ver código
-          </a>
-          <a href="https://ayvuniformes-puntos.vercel.app/" target="_blank" class="link-live">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver sitio
-          </a>
-        </div>
-      </article>
-
-      <!-- Proyecto 2 -->
-      <article class="project-card featured">
-        <div class="project-meta">
-          <span class="project-type">Desktop · Python</span>
-          <span class="project-status status-done">Completado</span>
-        </div>
-        <h3>Sistema de gestión de panadería</h3>
-        <p>Automatización y control de pedidos, historial y stock para una panadería. Frontend desarrollado con Flet para mejorar la eficiencia operativa.</p>
-        <div class="project-highlight">
-          <i class="fa-solid fa-star"></i>
-          Reduce errores manuales y optimiza el control de stock en tiempo real.
-        </div>
-        <div class="project-stack">
-          <span>Python</span>
-          <span>Flet</span>
-          <span>MySQL</span>
-          <span>Docker</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Lautidel8/sistema_gestor_panificadora" target="_blank">
-            <i class="fa-brands fa-github"></i> Ver código
-          </a>
-          <button class="link-img-btn" data-image="image.png">
-            <i class="fa-solid fa-image"></i> Ver imagen
-          </button>
-        </div>
-      </article>
-
-      <!-- Proyecto 3 -->
-      <article class="project-card featured">
-        <div class="project-meta">
-          <span class="project-type">Desktop · Python</span>
-          <span class="project-status status-done">Completado</span>
-        </div>
-        <h3>Sistema de alquiler de vehículos</h3>
-        <p>Gestión integral de alquiler de vehículos, reservas y control de pagos. Interfaz gráfica moderna con CustomTkinter.</p>
-        <div class="project-stack">
-          <span>Python</span>
-          <span>Tkinter</span>
-          <span>CustomTkinter</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/Lautidel8/Trabajo-practico-programacion-completo" target="_blank">
-            <i class="fa-brands fa-github"></i> Ver código
-          </a>
-        </div>
-      </article>
-
-      <!-- Proyecto 4 -->
-      <article class="project-card featured">
-        <div class="project-meta">
-          <span class="project-type">WEB · FULL STACK</span>
-          <span class="project-status status-done">Completado</span>
-        </div>
-        <h3>Sistema de Gestión Clínica</h3>
-        <p>Plataforma web desarrollada para Centro Wagner, un centro de estética y cirugía plástica, que centraliza la gestión de pacientes, tratamientos y turnos.</p>
-        <div class="project-highlight">
-          <i class="fa-solid fa-star"></i>
-          Despliegue on-premise con Docker, diseñado para proteger datos sensibles y mantener la operación dentro de la red interna de la clínica.
-        </div>
-        <div class="project-stack">
-          <span>Next.js</span>
-          <span>NestJS</span>
-          <span>PostgreSQL</span>
-          <span>Docker</span>
-        </div>
-        <div class="project-links">
-          <button class="link-img-btn" type="button"
-            data-images='["project-images/sistema-clinica-1.png","project-images/sistema-clinica-2.png","project-images/sistema-clinica-3.png","project-images/sistema-clinica-4.png"]'
-            data-titles='["Agenda y turnos del sistema clínico","Administración del sistema clínico","Tratamientos del sistema clínico","Pacientes del sistema clínico"]'>
-            <i class="fa-solid fa-image"></i> Ver imágenes
-          </button>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- HABILIDADES -->
-  <section id="habilidades" class="section section-alt">
-    <div class="section-header">
-      <h2>Skills</h2>
-      <p>Stack técnico organizado por áreas. Enfocado en backend, bases de datos y automatización.</p>
-    </div>
-
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h4><i class="fa-solid fa-server"></i> Backend</h4>
-        <div class="skill-tags">
-          <span><i class="fa-brands fa-python"></i> Python</span>
-          <span><i class="devicon-nestjs-original"></i> NestJS</span>
-          <span>REST APIs</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4><i class="fa-solid fa-database"></i> Bases de datos</h4>
-        <div class="skill-tags">
-          <span><i class="devicon-mysql-plain"></i> MySQL</span>
-          <span><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
-          <span>SQL</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4><i class="fa-solid fa-code"></i> Frontend</h4>
-        <div class="skill-tags">
-          <span><i class="fa-brands fa-html5"></i> HTML</span>
-          <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
-          <span><i class="devicon-nextjs-plain"></i> Next.js</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4><i class="fa-solid fa-gears"></i> DevOps & Herramientas</h4>
-        <div class="skill-tags">
-          <span><i class="fa-brands fa-docker"></i> Docker</span>
-          <span><i class="devicon-github-original"></i> GitHub</span>
-          <span>Git</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE MÍ -->
-  <section id="sobre-mi" class="section">
-    <div class="aboutme-layout">
-      <div class="aboutme-text">
-        <div class="section-header left">
-          <h2>Sobre mí</h2>
-          <p>Perfil backend con foco en soluciones eficientes y código limpio.</p>
-        </div>
-        <p>
-          Soy Lautaro Eberhardt, tengo 22 años y soy Técnico Superior en Desarrollo de Software.
-          Mi enfoque principal es el desarrollo backend, con sólidas aptitudes en Python y SQL.
-        </p>
-        <p>
-          Me apasiona diseñar soluciones eficientes y colaborar en proyectos que combinan
-          innovación y funcionalidad. Busco constantemente nuevos desafíos que me permitan
-          crecer y aportar valor real.
-        </p>
-
-        <div class="aboutme-cards">
-          <div class="about-card">
-            <i class="fa-solid fa-bolt"></i>
-            <div>
-              <strong>Soluciones eficientes</strong>
-              <span>Diseño sistemas pensados para escalar y mantenerse en el tiempo.</span>
+    </section>
+    <section class="projects section-wrap" id="proyectos" aria-labelledby="projects-title">
+      <div class="section-top"><span class="eyebrow"></span><span class="small-label">Ideas llevadas a la práctica</span></div>
+      <h2 id="projects-title" class="section-title reveal">Menos promesas.<br><span>Más proyectos.</span></h2>
+      <div class="projects-grid">
+        <article class="project-card project-rewards reveal">
+          <div class="project-cover">
+            <h3><span>Sistema de fidelización para</span><strong>AyV Uniformes</strong></h3>
+            <button class="project-preview gallery-trigger" type="button" data-gallery="rewards" aria-label="Ver captura de AyV Uniformes">
+              <span class="project-screen"><img src="project-images/ayv-clientes-privado.png" alt="Panel de clientes de AyV Uniformes con datos personales desenfocados" loading="lazy" width="1914" height="822"></span>
+              <span class="preview-open" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div class="project-details">
+            <p>Compras que se convierten en puntos, premios para los clientes y un panel para gestionar todo el proceso.</p>
+            <div class="project-stack"><span>Next.js</span><span>NestJS</span><span>PostgreSQL</span></div>
+            <div class="project-links">
+              <button class="gallery-trigger" type="button" data-gallery="rewards">Ver captura <span aria-hidden="true">↗</span></button>
+              <a href="https://ayvuniformes-puntos.vercel.app/" target="_blank" rel="noopener noreferrer">Ver sitio <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-          <div class="about-card">
-            <i class="fa-solid fa-handshake"></i>
-            <div>
-              <strong>Trabajo en equipo</strong>
-              <span>Me adapto fácilmente a equipos y metodologías ágiles.</span>
+        </article>
+        <article class="project-card project-clinic reveal">
+          <div class="project-cover">
+            <h3><span>Sistema de gestión clínica para</span><strong>Centro Wagner</strong></h3>
+            <button class="project-preview gallery-trigger" type="button" data-gallery="clinic" aria-label="Ver capturas de Centro Wagner">
+              <span class="project-screen clinic-crop"><img src="project-images/sistema-clinica-1.png" alt="Agenda y turnos del sistema de gestión de Centro Wagner" loading="lazy" width="1672" height="941"></span>
+              <span class="preview-open" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div class="project-details">
+            <p>Pacientes, tratamientos y turnos en un mismo lugar. Despliegue local en Docker dentro de la red de la clínica.</p>
+            <div class="project-stack"><span>Next.js</span><span>NestJS</span><span>PostgreSQL</span><span>Docker</span></div>
+            <div class="project-links">
+              <button class="gallery-trigger" type="button" data-gallery="clinic">Ver capturas <span aria-hidden="true">↗</span></button>
             </div>
           </div>
-          <div class="about-card">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <div>
-              <strong>Aprendizaje continuo</strong>
-              <span>Siempre actualizándome en backend, bases de datos y nuevas tecnologías.</span>
+        </article>
+        <article class="project-card project-bakery reveal">
+          <div class="project-cover">
+            <h3><span>Sistema de gestión para</span><strong>Panadería Janssen</strong></h3>
+            <button class="project-preview gallery-trigger" type="button" data-gallery="bakery" aria-label="Ver captura de Panadería Janssen">
+              <span class="project-screen"><img src="image.png" alt="Sistema de gestión de pedidos de Panadería Janssen" loading="lazy" width="1440" height="900"></span>
+              <span class="preview-open" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div class="project-details">
+            <p>Control de pedidos, historial y stock para Panadería Janssen. Una aplicación de escritorio que simplifica la gestión diaria.</p>
+            <div class="project-stack"><span>Python</span><span>Flet</span><span>MySQL</span><span>Docker</span></div>
+            <div class="project-links">
+              <button class="gallery-trigger" type="button" data-gallery="bakery">Ver captura <span aria-hidden="true">↗</span></button>
             </div>
           </div>
+        </article>
+        <article class="project-card project-byz reveal">
+          <div class="project-cover">
+            <h3><span>Sitio web para</span><strong>BYZ Tornería</strong></h3>
+            <a class="project-preview" href="https://byztorneria.com.ar/" target="_blank" rel="noopener noreferrer" aria-label="Visitar sitio de BYZ Tornería (abre en otra pestaña)">
+              <span class="project-screen"><img src="project-images/byz-torneria-preview.jpg" alt="Sitio web de BYZ Tornería en Esperanza, Santa Fe" loading="lazy" width="1265" height="712"></span>
+              <span class="preview-open" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="project-details">
+            <p>Servicios de mecanizado y reparación industrial, galería multimedia y contacto por WhatsApp. Exportación estática en Cloudflare Pages, imágenes optimizadas, fuentes locales y carga bajo demanda de recursos visuales. Metadata, sitemap y datos estructurados para buscadores.</p>
+            <div class="project-stack"><span>Next.js 16</span><span>React</span><span>TypeScript</span><span>Tailwind CSS v4</span><span>Cloudflare Pages</span></div>
+            <div class="project-links">
+              <a href="https://byztorneria.com.ar/" target="_blank" rel="noopener noreferrer">Ver sitio <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="about section-wrap" id="sobre-mi" aria-labelledby="about-title">
+      <div class="section-top"><span class="eyebrow">Detrás del código</span><span class="small-label">Hecho en Santa Fe, Argentina</span></div>
+      <div class="about-layout">
+        <div class="about-brand reveal"><img src="project-images/dev-eberhardt-logo-transparent.png" alt="Logo de dev.eberhardt: monograma plateado y verde con un mate" loading="lazy" width="1254" height="1254"><span class="small-label">Código, ideas y unos buenos mates.</span></div>
+        <div class="about-copy reveal"><h2 id="about-title">Soy Lautaro.<br><span>El dev detrás<br>de la idea.</span></h2><p>Soy desarrollador de software especializado en desarrollo fullstack, con un enfoque en la creación y diseño original de aplicaciones web y sistemas a medida.</p><p>He trabajado en proyectos que van desde landing pages corporativas hasta sistemas completos de gestión empresarial, participando en las distintas etapas del desarrollo. Me gusta entender el problema, pensar la estructura y construir una solución que tenga sentido.</p><a class="nav-action about-cv" href="CVLautaroEberhardt.pdf?v=20261111" download>
+        <span class="nav-action-fill" aria-hidden="true"></span>
+        <span class="nav-action-label">Descargar CV</span>
+        <span class="nav-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false"><path stroke-linecap="square" stroke-linejoin="miter" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></span>
+      </a><span class="cv-caption">PDF · Español</span></div>
+      </div>
+    </section>
+    <section class="tools-carousel" id="habilidades" aria-labelledby="tools-title">
+      <h2 class="visually-hidden" id="tools-title">Herramientas de trabajo</h2>
+      <div class="tools-viewport" tabindex="0" role="region" aria-label="Tecnologías utilizadas. Carrusel de logos">
+        <div class="tools-track">
+          <ul class="tools-group">
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/python.svg')" aria-hidden="true"></span><span>Python</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/nestjs.svg')" aria-hidden="true"></span><span>NestJS</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/postgresql.svg')" aria-hidden="true"></span><span>PostgreSQL</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/mysql.svg')" aria-hidden="true"></span><span>MySQL</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/nextdotjs.svg')" aria-hidden="true"></span><span>Next.js</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/react.svg')" aria-hidden="true"></span><span>React</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/typescript.svg')" aria-hidden="true"></span><span>TypeScript</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/tailwindcss.svg')" aria-hidden="true"></span><span>Tailwind CSS</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/html5.svg')" aria-hidden="true"></span><span>HTML5</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/css.svg')" aria-hidden="true"></span><span>CSS</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/docker.svg')" aria-hidden="true"></span><span>Docker</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/git.svg')" aria-hidden="true"></span><span>Git</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/github.svg')" aria-hidden="true"></span><span>GitHub</span></li>
+            <li class="tool-logo"><span class="tool-logo-icon" style="--tool-icon: url('project-images/tool-logos/cloudflare.svg')" aria-hidden="true"></span><span>Cloudflare</span></li>
+          </ul>
         </div>
       </div>
-
-      <div class="aboutme-cv">
-        <div class="cv-card">
-          <div class="cv-icon">
-            <i class="fa-solid fa-file-lines"></i>
-          </div>
-          <h4>Currículum Vitae</h4>
-          <p>Versión actualizada de mi perfil profesional, orientada a desarrollo backend y soluciones de software.</p>
-          <div class="cv-meta">
-            <span><i class="fa-solid fa-file-pdf"></i> Formato PDF</span>
-            <span><i class="fa-solid fa-language"></i> Español</span>
-            <span><i class="fa-solid fa-user-tie"></i> Backend Developer</span>
-          </div>
-          <a href="CVLautaroEberhardt.pdf" class="btn-primary" download>
-            <i class="fa-solid fa-download"></i> Descargar CV
-          </a>
+      <div class="tools-controls section-wrap"><button class="tools-toggle" type="button" hidden><span aria-hidden="true">Ⅱ</span><span class="tools-toggle-label">Pausar</span></button></div>
+    </section>
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <div class="section-wrap contact-inner">
+        <div class="section-top"><span class="eyebrow"></span><span class="availability"><span class="status-dot"></span> Disponible para oportunidades</span></div>
+        <h2 id="contact-title" class="reveal">Contame tu idea</h2>
+        <div class="contact-bottom">
+          <ul class="social-icons" aria-label="Redes sociales y correo">
+            <li class="icon-content">
+              <a class="social-button" href="https://wa.me/5493496512097" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (abre en otra pestaña)">
+                <span class="filled" aria-hidden="true"></span>
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg>
+              </a>
+              <span class="tooltip" aria-hidden="true">WhatsApp</span>
+            </li>
+            <li class="icon-content">
+              <a class="social-button" href="https://www.instagram.com/dev.eberhardt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (abre en otra pestaña)">
+                <span class="filled" aria-hidden="true"></span>
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg>
+              </a>
+              <span class="tooltip" aria-hidden="true">Instagram</span>
+            </li>
+            <li class="icon-content">
+              <a class="social-button" href="https://www.linkedin.com/in/lautaro-eberhardt-015574337/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (abre en otra pestaña)">
+                <span class="filled" aria-hidden="true"></span>
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+</svg>
+              </a>
+              <span class="tooltip" aria-hidden="true">LinkedIn</span>
+            </li>
+            <li class="icon-content">
+              <button class="social-button" type="button" id="copy-email" aria-label="Copiar mi email">
+                <span class="filled" aria-hidden="true"></span>
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+</svg>
+              </button>
+              <span class="tooltip" aria-hidden="true">Copiar email</span>
+            </li>
+          </ul>
         </div>
+        <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
       </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto" class="section section-alt">
-    <div class="section-header">
-      <h2>Contacto</h2>
-      <p>¿Tenés un proyecto o una oportunidad? Estoy disponible para colaborar.</p>
-    </div>
-
-    <div class="contact-layout">
-      <div class="contact-intro">
-        <div class="available-badge">
-          <span class="badge-dot"></span>
-          Disponible para oportunidades
-        </div>
-        <p>
-          Respondo rápido por email o LinkedIn. No dudes en contactarme para proyectos,
-          colaboraciones o nuevas oportunidades laborales.
-        </p>
-        <div class="contact-actions">
-          <button class="btn-primary copy-email-button" type="button" data-copy="lautaroeberhardt8@gmail.com" aria-label="Copiar email de Lautaro Eberhardt">
-            <i class="fa-solid fa-copy"></i> <span>Copiar email</span>
-          </button>
-          <a href="https://www.linkedin.com/in/lautaro-eberhardt-015574337/" target="_blank" class="btn-outline">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-          </a>
-        </div>
-      </div>
-
-      <div class="contact-info">
-        <a href="mailto:lautaroeberhardt8@gmail.com" class="contact-item copy-item" data-copy="lautaroeberhardt8@gmail.com">
-          <i class="fa-solid fa-envelope"></i>
-          <div>
-            <strong>Email</strong>
-            <span>lautaroeberhardt8@gmail.com</span>
-          </div>
-          <i class="fa-regular fa-copy copy-icon"></i>
-        </a>
-        <div class="contact-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <div>
-            <strong>Ubicación</strong>
-            <span>Santa Fe, Argentina</span>
-          </div>
-        </div>
-        <a href="https://github.com/LautaroEberhardt" target="_blank" class="contact-item">
-          <i class="fa-brands fa-github"></i>
-          <div>
-            <strong>GitHub</strong>
-            <span>LautaroEberhardt</span>
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/in/lautaro-eberhardt-015574337/" target="_blank" class="contact-item">
-          <i class="fa-brands fa-linkedin"></i>
-          <div>
-            <strong>LinkedIn</strong>
-            <span>Lautaro Eberhardt</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 Lautaro Eberhardt · Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- MODAL IMAGEN -->
-  <div id="img-modal" class="modal">
-    <button class="modal-close" id="modal-close" type="button" aria-label="Cerrar visor">&times;</button>
-    <button class="modal-nav modal-prev" id="modal-prev" type="button" aria-label="Imagen anterior"><i class="fa-solid fa-chevron-left"></i></button>
-    <img id="modal-img" src="" alt="Vista previa del proyecto">
-    <button class="modal-nav modal-next" id="modal-next" type="button" aria-label="Imagen siguiente"><i class="fa-solid fa-chevron-right"></i></button>
-    <p class="modal-counter" id="modal-counter" aria-live="polite"></p>
-  </div>
-
-  <script src="script.js"></script>
-  <script>
-    // Navbar scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 30);
-    });
-
-    // Mobile menu
-    const toggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    toggle.addEventListener('click', () => navMenu.classList.toggle('open'));
-    navMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => navMenu.classList.remove('open'));
-    });
-
-    // Smooth scroll offset
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          const offset = 72;
-          window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
-        }
-      });
-    });
-
-    // Modal imagen
-    const modal = document.getElementById('img-modal');
-    const modalImg = document.getElementById('modal-img');
-    const modalPrev = document.getElementById('modal-prev');
-    const modalNext = document.getElementById('modal-next');
-    const modalCounter = document.getElementById('modal-counter');
-    let modalImages = [];
-    let modalTitles = [];
-    let currentImage = 0;
-
-    const updateModalImage = () => {
-      modalImg.src = modalImages[currentImage];
-      modalImg.alt = modalTitles[currentImage] || 'Vista previa del proyecto';
-      const isCarousel = modalImages.length > 1;
-      modalPrev.hidden = !isCarousel;
-      modalNext.hidden = !isCarousel;
-      modalCounter.hidden = !isCarousel;
-      modalCounter.textContent = isCarousel ? `${currentImage + 1} / ${modalImages.length}` : '';
-    };
-
-    document.querySelectorAll('.link-img-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        modalImages = btn.dataset.images ? JSON.parse(btn.dataset.images) : [btn.dataset.image];
-        modalTitles = btn.dataset.titles ? JSON.parse(btn.dataset.titles) : [btn.dataset.title];
-        currentImage = 0;
-        updateModalImage();
-        modal.classList.add('active');
-      });
-    });
-    modalPrev.addEventListener('click', () => {
-      currentImage = (currentImage - 1 + modalImages.length) % modalImages.length;
-      updateModalImage();
-    });
-    modalNext.addEventListener('click', () => {
-      currentImage = (currentImage + 1) % modalImages.length;
-      updateModalImage();
-    });
-    document.getElementById('modal-close').addEventListener('click', () => modal.classList.remove('active'));
-    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
-    document.addEventListener('keydown', e => {
-      if (!modal.classList.contains('active')) return;
-      if (e.key === 'Escape') modal.classList.remove('active');
-      if (modalImages.length > 1 && e.key === 'ArrowLeft') modalPrev.click();
-      if (modalImages.length > 1 && e.key === 'ArrowRight') modalNext.click();
-    });
-
-    // Copiar al portapapeles
-    document.querySelectorAll('.copy-item').forEach(item => {
-      item.addEventListener('click', e => {
-        e.preventDefault();
-        const text = item.dataset.copy;
-        navigator.clipboard.writeText(text).then(() => {
-          const icon = item.querySelector('.copy-icon');
-          icon.className = 'fa-solid fa-check copy-icon copied';
-          setTimeout(() => icon.className = 'fa-regular fa-copy copy-icon', 1500);
-        });
-      });
-    });
-
-    // Copiar email desde el botón de contacto
-    document.querySelectorAll('.copy-email-button').forEach(button => {
-      button.addEventListener('click', () => {
-        navigator.clipboard.writeText(button.dataset.copy).then(() => {
-          const label = button.querySelector('span');
-          const icon = button.querySelector('i');
-          label.textContent = '¡Email copiado!';
-          icon.className = 'fa-solid fa-check';
-          setTimeout(() => {
-            label.textContent = 'Copiar email';
-            icon.className = 'fa-solid fa-copy';
-          }, 1800);
-        });
-      });
-    });
-
-    // Intersection Observer para animaciones
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.project-card, .skill-group, .about-card, .contact-item').forEach(el => observer.observe(el));
-  </script>
+    </section>
+  </main>
+  <footer class="footer section-wrap"><a class="brand-wordmark footer-brand" href="#inicio" aria-label="dev.eberhardt — Volver al inicio"><img src="project-images/dev-eberhardt-logo-transparent.png" alt="dev.eberhardt" width="1254" height="1254" loading="lazy"></a><p>© <span id="year">2026</span> dev.eberhardt · Lautaro Eberhardt</p><div class="footer-back"><a class="back-top" href="#inicio" aria-label="Volver arriba"><svg class="back-top-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1 1 8l1.4 1.4L7 4.8V15h2V4.8l4.6 4.6L15 8z"/></svg></a></div></footer>
+  <dialog class="gallery" id="gallery" aria-labelledby="gallery-title">
+    <div class="gallery-header"><h2 id="gallery-title">Vista del proyecto</h2><button id="gallery-close" class="gallery-close" type="button" aria-label="Cerrar galería">×</button></div>
+    <div class="gallery-image-wrap"><img id="gallery-image" alt=""><p id="gallery-error" hidden>No se pudo cargar la imagen.</p></div>
+    <div class="gallery-controls"><button id="gallery-prev" type="button" aria-label="Imagen anterior">←</button><p id="gallery-counter" aria-live="polite"></p><button id="gallery-next" type="button" aria-label="Imagen siguiente">→</button></div>
+  </dialog>
 </body>
 </html>
