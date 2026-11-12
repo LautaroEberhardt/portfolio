@@ -990,10 +990,11 @@ a:focus-visible,button:focus-visible {
 }
 
 .gallery-close {
+  flex-shrink: 0;
   background: none;
   font-size: 32px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
 }
 
 .gallery-image-wrap {
@@ -1018,8 +1019,8 @@ a:focus-visible,button:focus-visible {
 }
 
 .gallery-controls button {
-  width: 42px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   background: #ffffff0b;
   border: 1px solid var(--line);
   font-size: 20px;
@@ -1403,6 +1404,7 @@ a:focus-visible,button:focus-visible {
 .nav-menu { gap: 24px; }
 .nav-menu > a:not(.nav-action) { font-size: 18px; }
 .nav-action {
+  flex-shrink: 0;
   font-family: var(--font-brand);
   width: fit-content;
   position: relative;
@@ -1835,4 +1837,21 @@ a:focus-visible,button:focus-visible {
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .cursor-aura { display: block; }
   .cursor-aura.is-visible { opacity: 1; }
+}
+
+/* Keep the longer hero copy readable on narrow screens and short viewports. */
+.hero-stage { min-height: 0; }
+@media (max-width: 760px) {
+  .hero h1 { font-size: clamp(44px, 11vw, 80px); }
+  .line-front { left: 20px; right: 20px; white-space: normal; text-wrap: balance; }
+  .hero-bottom { bottom: max(28px, 6%); }
+  .social-icons { gap: clamp(12px, 3vw, 18px); }
+  .project-links a,.project-links button { min-height: 44px; display: inline-flex; align-items: center; }
+}
+@media (max-width: 1040px) {
+  .nav-menu { max-height: calc(100svh - var(--nav-h)); overflow-y: auto; overscroll-behavior: contain; }
+}
+@media (max-height: 500px) {
+  .hero { height: auto; min-height: 0; }
+  .hero-stage { position: relative; height: 560px; }
 }
