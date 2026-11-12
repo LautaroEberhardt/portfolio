@@ -1,0 +1,15 @@
+diff --git a/index.html b/index.html
+index d09c236..0d85da7 100644
+--- a/index.html
++++ b/index.html
+@@ -13,8 +13,8 @@
+   <link rel="icon" type="image/svg+xml" href="project-images/favicon-symbol.svg">
+   <link rel="preload" as="image" href="project-images/hero-dev-eberhardt-v1/mouse.png">
+   <link rel="preload" href="fonts/Chillax-Variable.woff2" as="font" type="font/woff2" crossorigin>
+-  <link rel="stylesheet" href="style.css?v=20261112-hero-type">
+-  <script src="script.js?v=20261112-hero-type" defer></script>
++  <link rel="stylesheet" href="style.css?v=20261112-hero-depth">
++  <script src="script.js?v=20261112-hero-depth" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#proyectos">Saltar al contenido</a>
