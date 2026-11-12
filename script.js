@@ -207,7 +207,8 @@ window.addEventListener('pointermove', event => {
   auraY = event.clientY;
   if (auraFrame) return;
   auraFrame = requestAnimationFrame(() => {
-    cursorAura.style.transform = `translate3d(${auraX}px, ${auraY}px, 0) translate(-50%, -50%)`;
+    cursorAura.style.setProperty('--pointer-x', `${auraX}px`);
+    cursorAura.style.setProperty('--pointer-y', `${auraY}px`);
     cursorAura.classList.add('is-visible');
     auraFrame = 0;
   });

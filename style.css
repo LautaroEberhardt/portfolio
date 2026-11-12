@@ -25,11 +25,16 @@
 }
 
 html {
+  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
 }
 
 body {
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
   margin: 0;
   background: var(--bg);
   color: var(--ink);
@@ -504,7 +509,7 @@ a:focus-visible,button:focus-visible {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 70px 32px;
   margin-top: 58px;
 }
@@ -787,7 +792,7 @@ a:focus-visible,button:focus-visible {
 
 .about-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 8%;
   align-items: center;
 }
@@ -1609,6 +1614,8 @@ a:focus-visible,button:focus-visible {
   border: 0;
 }
 .tools-carousel {
+  max-width: 100%;
+  overflow: clip;
   padding-block: 62px 28px;
   margin-bottom: 64px;
   border-block: 1px solid var(--line);
@@ -1816,23 +1823,30 @@ a:focus-visible,button:focus-visible {
 }
 .contact .contact-bottom { justify-content: flex-start; }
 .contact .copy-feedback { text-align: left; }
-/* A decorative glow follows mouse input without intercepting clicks. */
+/* Clip the glow inside a fixed viewport layer, including in desktop mobile previews. */
 .cursor-aura {
   display: none;
   position: fixed;
+  inset: 0;
+  overflow: hidden;
+  contain: strict;
+  pointer-events: none;
+  user-select: none;
+  z-index: 90;
+  opacity: 0;
+  mix-blend-mode: screen;
+  transition: opacity .18s;
+}
+.cursor-aura::before {
+  content: '';
+  position: absolute;
   left: 0;
   top: 0;
   width: 340px;
   height: 340px;
   border-radius: 50%;
   background: radial-gradient(circle, #00c87526 0%, #00c87510 35%, #00c87500 70%);
-  pointer-events: none;
-  user-select: none;
-  z-index: 90;
-  opacity: 0;
-  transform: translate3d(-250px, -250px, 0);
-  mix-blend-mode: screen;
-  transition: opacity .18s;
+  transform: translate3d(var(--pointer-x, -400px), var(--pointer-y, -400px), 0) translate(-50%, -50%);
 }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .cursor-aura { display: block; }
@@ -1855,3 +1869,6 @@ a:focus-visible,button:focus-visible {
   .hero { height: auto; min-height: 0; }
   .hero-stage { position: relative; height: 560px; }
 }
+
+/* Allow grid and flex content to shrink inside the available viewport. */
+main,.projects-grid,.about-layout,.about-layout > *,.project-details,.contact-bottom { min-width: 0; }
